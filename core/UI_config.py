@@ -1,0 +1,18 @@
+TRANSITION_SPEED = 15
+TRANSITION_COLOR = (0, 0, 0)
+
+# Анимация печати текста
+TEXT_TYPING_ENABLED = True
+TEXT_TYPING_SPEED = 55  # символов в секунду
+TEXT_TYPING_INITIAL_CHARS = 0
+
+# Анимация персонажа
+UNIT_BREATH_ENABLED = True
+UNIT_BREATH_SPEED = 0.004         # скорость синуса
+UNIT_BREATH_Y_AMPLITUDE = 2       # пикселей при scale = 1
+UNIT_BREATH_SCALE_AMPLITUDE = 0.01 # 0.025 = 2.5%
+
+# Анимация кнопок
+BUTTON_HOVER_SCALE = 1.08
+BUTTON_HOVER_LIGHTEN = 35
+BUTTON_ANIMATION_SPEED = 0.22
