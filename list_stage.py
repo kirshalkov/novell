@@ -3,20 +3,20 @@ import game_config as conf
 SCENES = {
     'start_menu': {
         'text': f'Добро пожаловать в игру {conf.name_game}!',
-        'name_unit': "pes",
-        'unit': "[ng",
+        'name_unit': "Потный Лесник",
+        'unit': "потныйлесник",
         'bg': 'png',
         'vars_return': (
             {
-                'text': 'новая игра',
+                'text': 'Новая игра',
                 'func': new_stage,
                 'args': 'Stage1.1',
             },
 
         ),
-        'scale_unit': 1,
-        'unit_offset_y': 150,
-        'unit_offset_x': -150,
+        'scale_unit': 0.08,
+        'unit_offset_y': -500,
+        'unit_offset_x': 100,
     },
     'Stage1.1': {
         'text': 'На часах 23 00, я засыпал под звук моего старого холодильника.',
@@ -980,74 +980,6 @@ SCENES = {
             {
                 'text': 'Далее...',
                 'func': new_stage,
-                'args': 'Stage4.6Choice1.1.2',
-            },
-
-        ),
-        'scale_unit': conf.size3,
-        'unit_offset_y': conf.y3,
-        'unit_offset_x': conf.x3,
-    },
-    'Stage4.6Choice1.1.2': {
-        'text': 'Время летит незаметно. Наступает вечер, за ним ночь. На часах снова 23:00.',
-        'name_unit': "Игорь",
-        'unit': "игорьигры",
-        'bg': 'комнатадень',
-        'vars_return': (
-            {
-                'text': 'Далее...',
-                'func': new_stage,
-                'args': 'Stage4.6Choice1.1.3',
-            },
-
-        ),
-        'scale_unit': conf.size3,
-        'unit_offset_y': conf.y3,
-        'unit_offset_x': conf.x3,
-    },
-    'Stage4.6Choice1.1.3': {
-        'text': 'Время летит незаметно. Наступает вечер, за ним ночь. На часах снова 23:00.',
-        'name_unit': "Игорь",
-        'unit': "игорь",
-        'bg': 'комнатадень',
-        'vars_return': (
-            {
-                'text': 'Далее...',
-                'func': new_stage,
-                'args': 'Stage4.6Choice1.1.4',
-            },
-
-        ),
-        'scale_unit': conf.size3,
-        'unit_offset_y': conf.y3,
-        'unit_offset_x': conf.x3,
-    },
-    'Stage4.6Choice1.1.4': {
-        'text': 'Я ложусь в кровать, надеясь, что сегодня высплюсь. Но ровно в час ночи... Бам! Бам! Бам!',
-        'name_unit': "Игорь",
-        'unit': "игорьуспокоится",
-        'bg': 'комнатадень',
-        'vars_return': (
-            {
-                'text': 'Далее...',
-                'func': new_stage,
-                'args': 'Stage4.6Choice1.1.5',
-            },
-
-        ),
-        'scale_unit': conf.size3,
-        'unit_offset_y': conf.y3,
-        'unit_offset_x': conf.x3,
-    },
-    'Stage4.6Choice1.1.5': {
-        'text': 'Опять этот проклятый стук! Все повторяется один в один. У меня начинает дергаться глаз.',
-        'name_unit': "Игорь",
-        'unit': "игорьзлой",
-        'bg': 'комнатадень',
-        'vars_return': (
-            {
-                'text': 'Далее...',
-                'func': new_stage,
                 'args': 'Stage5.1',
             },
 
@@ -1158,5 +1090,461 @@ SCENES = {
         'unit_offset_y': conf.y3,
         'unit_offset_x': conf.x3,
     },
-}
+    'Stage5.1': {
+        'text': 'Время летит незаметно. Наступает вечер, за ним ночь. На часах снова 23:00.',
+        'name_unit': "Игорь",
+        'unit': "игорьигры",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.2',
+            },
 
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.2': {
+        'text': 'Я ложусь в кровать, надеясь, что сегодня высплюсь. Но ровно в час ночи... Бам! Бам! Бам!',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.3': {
+        'text': 'Опять этот проклятый стук! Все повторяется один в один. У меня начинает дергаться глаз.',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Забить на звук и принять за галюны',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.1',
+            },
+            {
+                'text': 'Проверить квартиру снизу',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.2.1',
+            },
+            {
+                'text': 'Сходить за Санбоем',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.3.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.1.1': {
+        'text': 'Ну уж нет… Что? Опять?...',
+        'name_unit': "Игорь",
+        'unit': "игорьгрустный",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.1.2': {
+        'text': 'Ну не может же быть, что две ночи подряд люди колотят по батареям. Прошлой ночью я ходил к ним и проснулся у себя в кровати. Может банка огурцов с молоком была лишней?... Или нет… Пу-пу-пу, может я просто схожу с ума? Ладно, было у меня одно средство на такой случай',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.1.3': {
+        'text': 'Я достал из под кровати сверток из старых советских газет внутри которого была пачка таблеток',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.1.4': {
+        'text': 'Я пошел на кухню и налил себе стакан теплого молока. Я взял таблетку в рот и запил ее',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'кухня',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.5',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage5.4Choice1.1.5': {
+        'text': 'Я лег назад в постель, глаза сами начали не произвольно закрывается и…*Игорь уснул и больше не проснется*',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.6',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage5.4Choice1.1.6': {
+        'text': 'Утром Игоря нашёл его друг, Пророк Санбой, в постели холодного и не живого',
+        'name_unit': " ",
+        'unit': "игорьуспокоится",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.1.7',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.4Choice1.1.7': {
+        'text': ' ',
+        'name_unit': " ",
+        'unit': "игорьуспокоится",
+        'bg': 'конецигра',
+        'vars_return': (
+            {
+                'text': 'Новая игра',
+                'func': new_stage,
+                'args': 'Stage1.1',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.4Choice1.2.1': {
+        'text': 'Ну уж нет. Я не буду просто сидеть. Я снова выхожу в подъезд и спускаюсь на этаж ниже.',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.3.1': {
+        'text': 'Я подумал, что надежная компания мне не помешает и решил сходить за Санбоем. Пророк жил на этаж ниже той злополучной квартиры.',
+        'name_unit': "Игорь",
+        'unit': "игорьзадумчивый",
+        'bg': 'хата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.4Choice1.3.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.4Choice1.3.2': {
+        'text': 'Я спустился на этаж ниже, как раз туда, где и находилась ужасная квартира.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.5': {
+        'text': 'Около той самой двери я неожиданно сталкиваюсь со своим соседом.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.6',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.6': {
+        'text': 'О, Игорян! Ты тоже слышишь этот адский концерт? Моя гитара сама начинает резонировать!',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророк",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.7',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': conf.x2,
+    },
+    'Stage5.7': {
+        'text': 'Санбой? Ты что тут делаешь посреди ночи?',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.8',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage5.8': {
+        'text': 'Пришел развалить эту обитель зла! Нам нужно зайти внутрь и показать им, кто тут главный артист!',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророк",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.9',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': conf.x2,
+    },
+    'Stage5.9': {
+        'text': ' ',
+        'name_unit': " ",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Поговорить с санбоем',
+                'func': new_stage,
+                'args': 'Stage5.10Choice1.1.1',
+            },
+            {
+                'text': 'Понимающе кивнуть и на яйцах зайти внутрь',
+                'func': new_stage,
+                'args': 'Stage5.10Choice1.2.1',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.10Choice1.1.1': {
+        'text': 'Стой, булочка моя. Вот мы сейчас войдем, а дальше что? Изобьем его? Я слишком молод, чтобы попасть в “Черный дельфин”. Нам нужно придумать план действий…',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.10Choice1.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.10Choice1.1.2': {
+        'text': 'Игорь, не боись. Все будет чики-бамбони супер дупер убер клуто. Я все улажу сам, ты просто будь на стреме.',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.10Choice1.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.10Choice1.1.3': {
+        'text': 'Мы медленно подошли к двери и дернули за холодный металл, дверь распахнулась, и мы зашли внутрь.',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage6.1',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.10Choice1.2.1': {
+        'text': 'Я подумал, подумал… И в голову мне пришла фраза одного из моих любимых персонажей фильмов, как там его звали… а вспомнил – Мертвый бассейн… и как же он там говорил…  “С катанами в руках и яйцами в кулаке”. Ну катан у меня нет, а вот яйца огромные и стальные, моей уверенности хватит на нас двоих, еще и Тетю Зину у Деда Максима сможем забрать.',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.10Choice1.2.2',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage5.10Choice1.2.2': {
+        'text': 'Я жестом показал Санбою, что готов и мы открыли дверь…',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'персыдверь',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage6.1',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage6.1': {
+        'text': 'Мы продвигаемся вглубь квартиры. Воздух становится ледяным.',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'соседхата',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage6.2',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage6.2': {
+        'text': 'Из темноты снова вырастает та самая Искаженная Фигура. Но в этот раз она делает резкий шаг навстречу и протягивает свои пакли прямо мне к лицу',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'соседсилует2',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage6.3',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage6.3': {
+        'text': 'Я моргнул от страха и… услышал гул своего старого холодильника, шум утреннего уличного балагана.  Я снова очутился у себя в кровати',
+        'name_unit': "Игорь",
+        'unit': "пророк",
+        'bg': 'черный',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.1',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+}
