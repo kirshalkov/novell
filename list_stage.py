@@ -881,4 +881,282 @@ SCENES = {
         'unit_offset_y': conf.y3,
         'unit_offset_x': -6000,
     },
+    'Stage4.1': {
+        'text': 'А-а-ах!- я резко подпрыгиваю на кровати, тяжело дыша и хватаясь за сердце.',
+        'name_unit': "Игорь",
+        'unit': "игорьсонный",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.2',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage4.2': {
+        'text': 'Я осматриваюсь. Моя комната. Мой старый холодильник мирно гудит на кухне. На часах 8:00 утра. За окном светло.',
+        'name_unit': "Игорь",
+        'unit': "игорьсонный",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.3',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage4.3': {
+        'text': 'Неужели это был просто сон? Слишком уж реалистичный. Рука до сих пор помнит холод дверной ручки.',
+        'name_unit': "Игорь",
+        'unit': "игорьзадумчивый",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.4',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage4.4': {
+        'text': 'Надо как-то прийти в себя и прожить этот день.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.5',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage4.5': {
+        'text': 'Надо как-то прийти в себя и прожить этот день.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Остаться дома и попытаться забыть весь этот бред',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.1.1',
+            },
+            {
+                'text': 'Сходить к Пророку Санбою и рассказать о случившемся',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.1',
+            },
+
+        ),
+        'scale_unit': conf.size1,
+        'unit_offset_y': conf.y1,
+        'unit_offset_x': conf.x1,
+    },
+    'Stage4.6Choice1.1.1': {
+        'text': 'Я решаю никуда не ходить. Весь день сижу за компьютером, играю в дотку, пью энергетики, смотрю тупые тикток *на фоне слышны звуки six, seven, six, seven*.',
+        'name_unit': "Игорь",
+        'unit': "игорьигры",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.1.2': {
+        'text': 'Время летит незаметно. Наступает вечер, за ним ночь. На часах снова 23:00.',
+        'name_unit': "Игорь",
+        'unit': "игорьигры",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.1.3': {
+        'text': 'Время летит незаметно. Наступает вечер, за ним ночь. На часах снова 23:00.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.1.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.1.4': {
+        'text': 'Я ложусь в кровать, надеясь, что сегодня высплюсь. Но ровно в час ночи... Бам! Бам! Бам!',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.1.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.1.5': {
+        'text': 'Опять этот проклятый стук! Все повторяется один в один. У меня начинает дергаться глаз.',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.2.1': {
+        'text': 'Нет, я не сошел с ума. Мне нужно поговорить с кем-то, кто разбирается в чертовщине. Я иду к своему эксцентричному другу.',
+        'name_unit': "Игорь",
+        'unit': "игорьзадумчивый",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.2.2': {
+        'text': 'Игорян! Привет, заходи! Что на тебе лица нет? Опять мысли о женщинах спать не дают?',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророк",
+        'bg': 'лестницадверьсоседа',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.3',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': conf.x2,
+    },
+    'Stage4.6Choice1.2.3': {
+        'text': 'Санбой, я не шучу. Мне приснился дикий сон, будто я спустился вниз, а там в квартире какое-то гачи.',
+        'name_unit': "Игорь",
+        'unit': "игорьпоясняет",
+        'bg': 'лестницадверьсоседа',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage4.6Choice1.2.4': {
+        'text': 'Это не сон, Игорек! Стены поют, трубы трубят- это древние вибрации бетонных джунглей! Они ищут выход наружу!',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророкухмылка",
+        'bg': 'лестницадверьсоседа',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.5',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': conf.x2,
+    },
+    'Stage4.6Choice1.2.5': {
+        'text': 'Возьми вот эту старую кассету с песнями Доры, если станет совсем туго- включи её, она разгоняет любую тоску!',
+        'name_unit': "Пророк Санбой",
+        'unit': "пророкухмылка",
+        'bg': 'лестницадверьсоседа',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage4.6Choice1.2.6',
+            },
+
+        ),
+        'scale_unit': conf.size2,
+        'unit_offset_y': conf.y2,
+        'unit_offset_x': conf.x2,
+    },
+    'Stage4.6Choice1.2.6': {
+        'text': 'Спасибо, Санбой. Надеюсь, до этого не дойдет. Я возвращаюсь домой.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'лестницадверьсоседа',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage5.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
 }
+
