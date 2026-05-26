@@ -1,23 +1,6 @@
 from core.list_func import *
 import game_config as conf
 SCENES = {
-    'start_menu': {
-        'text': f'Добро пожаловать в игру {conf.name_game}!',
-        'name_unit': "Потный Лесник",
-        'unit': "потныйлесник",
-        'bg': 'png',
-        'vars_return': (
-            {
-                'text': 'Новая игра',
-                'func': new_stage,
-                'args': 'Stage1.1.1',
-            },
-
-        ),
-        'scale_unit': 0.08,
-        'unit_offset_y': -500,
-        'unit_offset_x': 100,
-    },
     'Stage1.1': {
         'text': f'Добро пожаловать в игру {conf.name_game}!',
         'name_unit': "Потный Лесник",

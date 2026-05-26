@@ -8,7 +8,7 @@ screen = pygame.display.set_mode((1280, 720), pygame.RESIZABLE)
 
 clock = pygame.time.Clock()
 
-game = game_starter.start_game(screen=screen, stage='start_menu', main_unit=game_config.main_unit)
+game = game_starter.start_game(screen=screen, stage='Stage1.1', main_unit=game_config.main_unit)
 
 # pygame.mixer.music.load("assets/music/main_theme.mp3")
 # pygame.mixer.music.set_volume(0.4)
