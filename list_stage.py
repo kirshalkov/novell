@@ -10,7 +10,7 @@ SCENES = {
             {
                 'text': 'Новая игра',
                 'func': new_stage,
-                'args': 'Stage1.1',
+                'args': 'Stage1.1.1',
             },
 
         ),
@@ -19,6 +19,23 @@ SCENES = {
         'unit_offset_x': 100,
     },
     'Stage1.1': {
+        'text': f'Добро пожаловать в игру {conf.name_game}!',
+        'name_unit': "Потный Лесник",
+        'unit': "потныйлесник",
+        'bg': 'png',
+        'vars_return': (
+            {
+                'text': 'Новая игра',
+                'func': new_stage,
+                'args': 'Stage1.1.1',
+            },
+
+        ),
+        'scale_unit': 0.08,
+        'unit_offset_y': -500,
+        'unit_offset_x': 100,
+    },
+    'Stage1.1.1': {
         'text': 'На часах 23 00, я засыпал под звук моего старого холодильника.',
         'name_unit': "Игорь",
         'unit': "игорь",
@@ -1545,6 +1562,903 @@ SCENES = {
         ),
         'scale_unit': conf.size2,
         'unit_offset_y': conf.y2,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.1': {
+        'text': 'Вздох! Я снова открываю глаза в своей постели. На часах опять 8:00 утра.',
+        'name_unit': "Игорь",
+        'unit': "игорьудивление",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.2': {
+        'text': 'Да что за чертовщина?! Я застрял в одном и том же дне! Это петля?',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.3': {
+        'text': 'Да что за чертовщина?! Я застрял в одном и том же дне! Это петля?',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.4': {
+        'text': 'Да что за чертовщина?! Я застрял в одном и том же дне! Это петля?',
+        'name_unit': "Игорь",
+        'unit': "игорьгрустный",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Попробовать ничего не делать',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.1.1',
+            },
+            {
+                'text': 'Сразу пойти ломится в дверь соседа',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.2.1',
+            },
+            {
+                'text': 'Позвонить в полицию',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.1.1': {
+        'text': 'Я решаю проверить, что будет если даже не начинать этот день',
+        'name_unit': "Игорь",
+        'unit': "игорьзадумчивый",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.1.2': {
+        'text': 'Я остаюсь в постели, не иду кушать, умываться, работать, словно мир для меня исчез остался только я и моя кровать',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.1.3': {
+        'text': 'Я потерял счет времени в таком положении и может через 3 дня, может через 5, а может и вовсе через неделю я начал ощущать сильную слабость, я не мог пошевелить ни одной из своих конечностей.',
+        'name_unit': "Игорь",
+        'unit': "игорьзаебался",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.1.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.1.4': {
+        'text': 'В конце концов Игорь не выдержав истощения уснули больше не проснулся. На утро Игоря нашли в постели холодного и неживого',
+        'name_unit': " ",
+        'unit': "игорьзаебался",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.1.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.1.5': {
+        'text': ' ',
+        'name_unit': " ",
+        'unit': "игорьзаебался",
+        'bg': 'конецигра',
+        'vars_return': (
+            {
+                'text': 'Новая игра',
+                'func': new_stage,
+                'args': 'Stage1.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.2.1': {
+        'text': 'Я сию секунда вскочил со своей кровати, в спешке оделся, выбежал в подъезд.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.2.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.2.2': {
+        'text': 'Из-за моей спешки я даже не успел надеть свои счастливые труханы.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.2.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.2.3': {
+        'text': 'Я подбежал к той самой квартире, опять дернул за ручку и… КВАРТИРА ОКАЗАЛАСЬ ЗАПЕРТОЙ…',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Забить и пойти домой, дожидаясь ночи',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.1.1',
+            },
+            {
+                'text': 'Стоять и ждать владельца, периодически дёргая ручку',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.1',
+            },
+            {
+                'text': 'Пойти за Санбоем, предложив ему выбить дверь и вломиться в квартиру',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.3.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.1.1': {
+        'text': 'Ладно, утро вечера мудренее. Сейчас день, ломиться сквозь закрытый металл бессмысленно.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+
+    'Stage7.5Choice2.1.2': {
+        'text': 'Пойду к себе, попробую залипнуть в комп и просто переждать время до темноты.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.1.3': {
+        'text': 'Нет... Что я определенно делаю не так...',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.1.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.1.4': {
+        'text': 'Как же поступить в этот раз...',
+        'name_unit': "Игорь",
+        'unit': "игорьгрустный",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Сразу пойти ломится в дверь соседа',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.2.1',
+            },
+            {
+                'text': 'Позвонить в полицию',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.1': {
+        'text': 'Я никуда не уйду. Буду торчать здесь как памятник собственной глупости, пока эта качающаяся тварь не выйдет наружу.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.2': {
+        'text': 'Час стою, два стою... Периодически судорожно подергиваю ручку — заперто намертво.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Продолжить дергать и торчать здесь',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3',
+            },
+            {
+                'text': 'Начать со всей дури пиздить в дверь всем чем можно и орать как ебанутый',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.1.1',
+            },
+            {
+                'text': 'Пойти за Санбоем, предложив ему выбить дверь и вломиться в квартиру',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.2.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3': {
+        'text': 'Я упорный. Буду стоять до победного конца...',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.4': {
+        'text': 'Я непоколебимо простоял на холодном кафеле весь день. Из-за дикого стресса, отсутствия еды и паранойи его начинает тошнить, голова раскалывается.',
+        'name_unit': "Игорь",
+        'unit': "игорьзаебался",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.5': {
+        'text': 'В конце концов, мои ноги подкосились, в глазах потемнело, и я грохнулся в обморок от истощения. ',
+        'name_unit': "Игорь",
+        'unit': "игорьзаебался",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Упасть в обморок от стресса и истощения',
+                'func': new_stage,
+                'args': 'Stage7.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3.1.1': {
+        'text': 'Ах ты падла анаболическая! Открывай! Открывай, кому говорю! Я знаю, что ты там прячешься!',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.1.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3.1.2': {
+        'text': '...',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.1.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3.1.3': {
+        'text': 'Я неистово долблю в дверь кулаками, пинаю её обувью и истошно визжу на весь подъезд.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед2',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.1.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3.1.4': {
+        'text': 'Из-за шума соседи со 2 этажа решили мусарнуться и вызвали ментов на Игоря',
+        'name_unit': " ",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед2',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.1.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice2.2.3.1.5': {
+        'text': 'Игоря доставили в мусарню где он провел в камере 2 дня. Его там знатно отпетушили после чего он лег под зассаный шконарь и уснул...',
+        'name_unit': " ",
+        'unit': "игорьзад",
+        'bg': 'мусарня',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice2.2.3.2.1': {
+        'text': 'Один я эту дверь точно не вынесу, да и одному идти к этому стероидному чучелу - чистой воды самоубийство. Нужен напарник.',
+        'name_unit': "Игорь",
+        'unit': "игорьзад",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.2.3.2.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.2.3.2.2': {
+        'text': 'Я разворачиваюсь и направляюсь к Пророку Санбою. Он точно должен помочь.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage8.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.3.1': {
+        'text': 'Так, один в поле не воин. Мне нужен Пророк. Он живет этажом ниже и явно что-то смыслит в потусторонней чертовщине, которая здесь творится.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice2.3.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice2.3.2': {
+        'text': 'Быстрыми шагами я спускаюсь по лестнице прямо к его двери, готовый выложить всё как есть.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage8.1',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.1': {
+        'text': 'Точно, пускай этим дерьмом занимаются профессионалы. Наберу-ка я 112, закон на моей стороне.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2': {
+        'text': 'Алло, полиция? Тут в квартире снизу сектанты или голые мужики в масле какие-то, спать не дают, по батареям колотят!',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'комнатадень',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.3',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.3': {
+        'text': 'Полиция приезжает, говорит Игорю, что у них нет ордера на вход, поэтому они приедут ночью, чтоб зафиксировать шум и поговорить с нарушителем.',
+        'name_unit': " ",
+        'unit': "Мент",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.4',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.4': {
+        'text': 'Игорь начинает безбожно орать матом, рассказывать произошедшее, угрожать мусорам кидаться любыми вещами, попавшими под руку, избивать полицейский и тд...',
+        'name_unit': " ",
+        'unit': "Мент",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.5',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.5': {
+        'text': 'Гражданин, сейчас день. Какой шум? Дверь закрыта. Ломать чужую собственность без оснований мы не имеем права. Ждите ночи, тогда и ЗА-ФИ-КСИ-РУ-ЕМ.',
+        'name_unit': "Мусор",
+        'unit': "Мент",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.6',
+            },
+
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.6': {
+        'text': '...',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Игорь понимает, что полиция тут бессильна',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.1.1',
+            },
+            {
+                'text': 'Забить и ждать полицию, она точно со всем разберётся',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.1',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.1.1': {
+        'text': 'Да какая ночь, вы не понимаете! Ночью будет уже поздно!',
+        'name_unit': "Игорь",
+        'unit': "игорьзлой",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.1.2',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.1.2': {
+        'text': 'Стражи порядка лишь крутят пальцем у виска. Полиция не приедет, тк Игорь слишком странно и ёбнуто говорил, они посчитали его психом и чуть не упекли в дурку.',
+        'name_unit': " ",
+        'unit': "Мент",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.1.3',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.1.3': {
+        'text': 'Ну и ладно. Раз закон не работает, придётся решать вопрос силой...',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.2.1',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.1': {
+        'text': 'Ладно, подожду до ночи. Менты пообещали приехать - значит приедут. Закон превыше всего, пускай сами разбираются с этим театром.',
+        'name_unit': "Игорь",
+        'unit': "игорьуспокоится",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.2': {
+        'text': 'Игорь дожидается ночи, ничего не меняется, он понимает, что ждать и терпеть это не выход - нужно действовать. На часах ровно 01:00, и по батареям начинает херачить оглушительный металлический грохот.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'хатастеликом',
+        'vars_return': (
+            {
+                'text': 'Ничего не делать и ждать развязки',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.1.1',
+            },
+            {
+                'text': 'Пойти к двери и ждать полицию',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.1',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.1.1': {
+        'text': 'О, приехали! Слава богу. Я сию у себя в комнате и не высовываюсь. Пускай сами его скручивают.',
+        'name_unit': "Игорь",
+        'unit': "игорь",
+        'bg': 'хатастеликом',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.1.2',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.1.2': {
+        'text': 'От входа в квартиру доносятся звуки удара по двери...Из подъезда слышны страшные вопли...',
+        'name_unit': " ",
+        'unit': "игорь",
+        'bg': 'хатастеликом',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.1.3',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.1.3': {
+        'text': '...',
+        'name_unit': " ",
+        'unit': "игорь",
+        'bg': 'смерть',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.1.4',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.2.1.4': {
+        'text': ' ',
+        'name_unit': " ",
+        'unit': "игорь",
+        'bg': 'конецигра',
+        'vars_return': (
+            {
+                'text': 'Новая игра',
+                'func': new_stage,
+                'args': 'Stage1.1',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.2.2.1': {
+        'text': 'Надо выйти на лестничную клетку и встретить наряд, чтобы скоординировать их.',
+        'name_unit': "Игорь",
+        'unit': "игорьзадумчивый",
+        'bg': 'хатастеликом',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.2',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.2.2': {
+        'text': 'Полиция и Игорь простояли долго у той двери... Спустя какое-то время стали слышны звуки ударов по батареям.',
+        'name_unit': " ",
+        'unit': "игорьзадумчивый",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.3',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.2.2.3': {
+        'text': 'Полиция приказывает хозяину прекратить и открыть дверь, но...',
+        'name_unit': " ",
+        'unit': "мент",
+        'bg': 'дверьсосед',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.4',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': conf.x3,
+    },
+    'Stage7.5Choice1.3.2.2.4': {
+        'text': '...',
+        'name_unit': " ",
+        'unit': "мент",
+        'bg': 'дверьсосед2',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.5',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.2.2.5': {
+        'text': 'Фигура выламывает свою же дверь и убивает всех живых и не живых на своем пути',
+        'name_unit': " ",
+        'unit': "игорьзадумчивый",
+        'bg': 'фигураподъезд',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage7.5Choice1.3.2.2.6',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
+        'unit_offset_x': -6000,
+    },
+    'Stage7.5Choice1.3.2.2.6': {
+        'text': ' ',
+        'name_unit': " ",
+        'unit': "игорьзадумчивый",
+        'bg': 'конецигра',
+        'vars_return': (
+            {
+                'text': 'Далее...',
+                'func': new_stage,
+                'args': 'Stage1.1',
+            },
+        ),
+        'scale_unit': conf.size3,
+        'unit_offset_y': conf.y3,
         'unit_offset_x': -6000,
     },
 }
