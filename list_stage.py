@@ -1052,9 +1052,9 @@ SCENES = {
             },
 
         ),
-        'scale_unit': conf.size2,
+        'scale_unit': 0.45,
         'unit_offset_y': conf.y2,
-        'unit_offset_x': conf.x2,
+        'unit_offset_x': -780,
     },
     'Stage4.6Choice1.2.5': {
         'text': 'Возьми вот эту старую кассету с песнями Доры, если станет совсем туго- включи её, она разгоняет любую тоску!',
@@ -1069,9 +1069,9 @@ SCENES = {
             },
 
         ),
-        'scale_unit': conf.size2,
+        'scale_unit': 0.45,
         'unit_offset_y': conf.y2,
-        'unit_offset_x': conf.x2,
+        'unit_offset_x': -780,
     },
     'Stage4.6Choice1.2.6': {
         'text': 'Спасибо, Санбой. Надеюсь, до этого не дойдет. Я возвращаюсь домой.',
